@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Email Validation</title>
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+    <button onclick="validateEmail()">Validate</button>
+
+    <script>
+        function validateEmail() {
+            let emailInput = document.getElementById('email').value;
+            let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (regex.test(emailInput)) {
+                alert('Valid email address');
+            } else {
+                alert('Invalid email address');
+            }
+        }
+    </script>
+</body>
+</html>

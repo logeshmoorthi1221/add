@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Number Validation</title>
+</head>
+<body>
+<label for="Phone Number">Phone Number</label>
+<form onsubmit="return numvalidate()">
+<input type="text" id="num"/><br>
+<input type="submit" value="Check for Number"/>
+</form>
+<script>
+function numvalidate() {
+    var number = document.getElementById("num").value;
+    var regx = /[6-9]\d{9}/;
+    if (regx.test(number)) {
+        alert("Valid number");
+        return true;
+    } else {
+        alert("Not a valid number");
+        return false;
+    }
+}
+</script>
+</body>
+</html>
